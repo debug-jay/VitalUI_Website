@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 const SignUp = () =>{
+
+
+function TestBox()
+{
+    window.alert("You have successfully logged in\n Add Logic For Login here! ");
+
+
+
+}
+
+
+
     return(
         <>
 <div className='flex h-screen'>
@@ -157,7 +169,8 @@ const SignUp = () =>{
         <a class="underline" href="">Sign up</a>
       </p> */}
 
-      <button
+      <button onClick={() => TestBox()}
+    
         type="submit"
         class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg"
       >
