@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 
 const SignUp = () =>{
 
+var firstname = new String();
+var lastname = new String();
+var email = new String();
+var password = new String();
+
+
+
 
 function TestBox()
 {
-    window.alert("You have successfully logged in\n Add Logic For Login here! ");
+    window.alert("Add Logic For Login here! ");
+
+    
 
 
 

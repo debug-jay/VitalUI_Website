@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import SignupForm from '../pages/Signup';
 
 const LoginPage = () =>{
     return(
@@ -84,13 +85,15 @@ const LoginPage = () =>{
 
     <div class="flex items-center justify-between">
       <p class="text-sm text-gray-500">
+        
         No account?
-        <a class="underline" href="">Sign up</a>
+        <a class="underline" href="/signup">Sign up</a>
       </p>
 
-      <button
-        type="submit"
+      <button 
+    
         class="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg"
+        
       >
         Sign in
       </button>
