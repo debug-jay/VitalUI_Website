@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+//fonts
+import './fonts/MoskMedium500.ttf';
+
 import RoutesPages from './scripts/RoutesPages';
 
 export default function App(){

@@ -11,12 +11,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #23395d;
+  font-family: "MoskMed";
+}
+
+#cards {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 code {
@@ -35,4 +40,18 @@ code {
   background-color: #23395d;
 
   top:28rem;
+}
+
+@font-face {
+  font-family: "Leyton";
+  src: local("LeytonPersonal-Bold"), url("./fonts/LeytonPersonal-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "MoskMed";
+  src: local("MoskMedium500.ttf"), url("./fonts/MoskMedium500.ttf") format("truetype");
+}
+
+#box_temp {
+  height: 36rem;
 }

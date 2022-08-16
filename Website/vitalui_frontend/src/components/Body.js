@@ -5,10 +5,10 @@ const WebComps = () => {
         <section className="" id="components"></section>
             <div className=" mt-24 xl:mx-64 lg:mx-10">
                 <span className="text-white font-extrabold tracking-wider text-2xl ml-5">Website Components</span>
-                <div className=' grid 2xl:grid-cols-4 grid-cols-1 md:grid-cols-2'>
+                <div className=' grid 2xl:grid-cols-4 grid-cols-1 md:grid-cols-2' id="cards">
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="/navigations">
                             <div class=" sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Navigations</h5>
 
@@ -24,7 +24,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="alerts">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Alerts</h5>
 
@@ -40,7 +40,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="ctas">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">CTAs</h5>
 
@@ -56,7 +56,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="faqs">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">FAQs</h5>
 
@@ -72,7 +72,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="banners">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Banners</h5>
 
@@ -88,7 +88,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="footers">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Footers</h5>
 
@@ -104,7 +104,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="buttons">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Buttons</h5>
 
@@ -120,7 +120,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="sections">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Sections</h5>
 
@@ -136,7 +136,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="cards">
                             <div class=" sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Cards</h5>
 
@@ -152,7 +152,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="tabs">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Tabs</h5>
 
@@ -168,7 +168,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="announcements">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Announcements</h5>
 
@@ -184,7 +184,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="testimonials">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Testimonials</h5>
 
@@ -200,7 +200,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="forms">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Forms</h5>
 
@@ -216,7 +216,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="popups">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Popups</h5>
 
@@ -232,7 +232,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="menus">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Menus</h5>
 
@@ -248,7 +248,7 @@ const WebComps = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="stats">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Stats</h5>
 
@@ -275,10 +275,10 @@ const AppUI = () => {
         <section className="" id="applicationui"></section>
             <div className="mt-24 xl:mx-64 lg:mx-10">
             <span className="text-white font-extrabold tracking-wider text-2xl ml-5">Web Application UI's</span>
-            <div className=' grid 2xl:grid-cols-4 grid-cols-1 md:grid-cols-2'>
+            <div className=' grid 2xl:grid-cols-4 grid-cols-1 md:grid-cols-2' id="cards">
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="dropdowns">
                             <div class=" sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Dropdowns</h5>
 
@@ -294,7 +294,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full ">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl " href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl " href="buttontabs">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900 w-full">Button Tabs</h5>
 
@@ -310,7 +310,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="paginations">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Paginations</h5>
 
@@ -326,7 +326,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="sidemenus">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Side Menus</h5>
 
@@ -342,7 +342,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="headers">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Headers</h5>
 
@@ -358,7 +358,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="states">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">States</h5>
 
@@ -374,7 +374,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="tables">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Tables</h5>
 
@@ -390,7 +390,7 @@ const AppUI = () => {
                     </div>
                     <div className=" flex justify-center items-center p-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                     <div class="p-1 shadow-xl bg-gradient-to-r from-blue-500 via-blue-300 to-purple-300 rounded-2xl w-full">
-                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="">
+                        <a class="block p-6 bg-gray-100 sm:p-8 rounded-xl" href="inputs">
                             <div class="sm:pr-8">
                             <h5 class="text-xl font-bold text-gray-900">Inputs</h5>
 
@@ -415,7 +415,7 @@ const Templates = () => {
     return(
         <>
         <section id="templates"></section>
-            <div className="mb-56 mt-24 xl:mx-64 lg:mx-10">
+            <div className="mb-56 mt-24 xl:mx-64 lg:mx-10" id="cards">
                 <span className="text-white font-extrabold tracking-wider text-2xl ml-5">Templates</span>
                 <div className=" mt-10">
                 <span className="ml-5 text-white font-extrabold text-2xl">Coming Soon!</span>
