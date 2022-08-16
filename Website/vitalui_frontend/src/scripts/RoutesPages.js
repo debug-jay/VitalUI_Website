@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
 import Login from '../pages/Login';
+import SignupForm from '../pages/Signup';
 import NoPage from '../pages/NoPage';
 
 // Website Components Links
@@ -42,6 +43,7 @@ const RoutesPages = () => {
 
           {/** Sign Up / Login Screen */}
           <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<SignupForm/>}/>
 
           {/** Website Components Links*/}
           <Route path="/navigations" element={<NavigationsPage/>}/>
