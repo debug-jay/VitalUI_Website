@@ -34,8 +34,7 @@ function TestBox()
     <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
     <p class="mt-4 text-gray-500">
-        Signup today for an account with VitalUI! 
-        *TESTING*
+        Please fill out the following to signup for an account!
     </p>
   </div>
 
