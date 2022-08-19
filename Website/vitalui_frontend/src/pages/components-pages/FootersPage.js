@@ -2,9 +2,12 @@ import TemplatePage from "../templates-pages/TemplatePage";
 
 
 const FootersPage = () => {
+
+    const sName = "Footers Components";
+
     return(
         <>
-            Page
+            <TemplatePage sectionName={sName} />
         </>
     );
 }

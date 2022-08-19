@@ -2,9 +2,12 @@ import TemplatePage from "../templates-pages/TemplatePage";
 
 
 const PopupsPage = () => {
+
+    const sName = "Popup Components";
+
     return(
         <>
-            Page
+            <TemplatePage sectionName={sName} />
         </>
     );
 }

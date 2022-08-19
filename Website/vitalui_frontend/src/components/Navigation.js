@@ -26,7 +26,7 @@ const NAVBAR = () =>
 
   <div className='flex lg:hidden w-2/3 justify-end items-center'>
     <div className='lg:mr-5 hidden sm:block '>
-      <Link to="/login" className=" flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-0 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 md:mt-0">Sign Up</Link>
+      <Link to="/signup" className=" flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-0 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 md:mt-0">Sign Up</Link>
     </div>
     <div className='lg:mr-5 hidden sm:block'>
         <Link to="/login" className=" flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-4 border border-white rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-white md:mt-0">Login</Link>
@@ -52,7 +52,7 @@ const NAVBAR = () =>
       </a>
     </div>
     <div className='lg:mr-5 sm:hidden'>
-      <Link to="/login" className="mb-5 lg:mb-0 flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 mt-4 lg:mt-0">Sign Up</Link>
+      <Link to="/signup" className="mb-5 lg:mb-0 flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 mt-4 lg:mt-0">Sign Up</Link>
     </div>
     <div className='lg:mr-5 sm:hidden'>
         <Link to="/login" className="mb-5 lg:mb-0 flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-5 border border-white rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>
@@ -62,7 +62,7 @@ const NAVBAR = () =>
   </div>:null}
   <div className=' hidden lg:inline-flex'>
     <div className='lg:mr-5'>
-      <Link to="/login" className="mb-5 lg:mb-0 flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 mt-4 lg:mt-0">Sign Up</Link>
+      <Link to="/signup" className="mb-5 lg:mb-0 flex justify-center items-center text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-5 border border-purple-500 rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-black hover:bg-opacity-30 mt-4 lg:mt-0">Sign Up</Link>
     </div>
     <div className='lg:mr-5'>
         <Link to="/login" className="mb-5 lg:mb-0 flex justify-end items-end text-sm px-4 py-2 leading-none mobile:mr-5 mobile:ml-0 border border-white rounded-md text-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Login</Link>

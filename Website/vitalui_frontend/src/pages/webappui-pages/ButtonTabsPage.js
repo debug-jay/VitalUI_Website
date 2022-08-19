@@ -2,9 +2,12 @@ import TemplatePage from "../templates-pages/TemplatePage";
 
 
 const ButtonTabsPage = () => {
+
+    const sName = "Button-Tab Components";
+
     return(
         <>
-            Page
+            <TemplatePage sectionName={sName} />
         </>
     );
 }

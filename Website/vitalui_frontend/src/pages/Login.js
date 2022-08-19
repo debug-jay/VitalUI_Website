@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 const LoginPage = () =>{
+
+
     return(
         <>
 <div className='flex h-screen'>
@@ -10,23 +12,23 @@ const LoginPage = () =>{
 
   <div class="max-w-lg mx-auto text-center mt-36">
 
-    <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+    <h1 class="text-2xl font-bold sm:text-3xl">Login To Your Account</h1>
 
     <p class="mt-4 text-gray-500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla
-      eaque error neque ipsa culpa autem, at itaque nostrum!
+      Welcome Back to VitalUI! Thank You for Using Our Service.
+      {/*"Become a Member Today and Get Access to a Samll Section of Free Components! We Can't Wait to See What You Create With Our Components!*/}
     </p>
   </div>
 
   <form action="" class="max-w-md mx-auto mt-8 mb-0 space-y-4">
     <div>
-      <label for="email" class="sr-only">Email</label>
+      <label for="username" class="sr-only">UserName</label>
 
       <div class="relative">
         <input
-          type="email"
+          type="username"
           class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-          placeholder="Enter email"
+          placeholder="Username"
         />
 
         <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -54,7 +56,7 @@ const LoginPage = () =>{
         <input
           type="password"
           class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
-          placeholder="Enter password"
+          placeholder="Password"
         />
 
         <span class="absolute inset-y-0 inline-flex items-center right-4">
@@ -84,8 +86,8 @@ const LoginPage = () =>{
 
     <div class="flex items-center justify-between">
       <p class="text-sm text-gray-500">
-        No account?
-        <a class="underline" href="">Sign up</a>
+        No Account?
+        <a class="underline" href=""> Sign Up</a>
       </p>
 
       <button

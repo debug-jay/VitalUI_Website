@@ -2,9 +2,12 @@ import TemplatePage from "../templates-pages/TemplatePage";
 
 
 const SectionsPage = () => {
+
+    const sName = "Section Components";
+
     return(
         <>
-            Page
+            <TemplatePage sectionName={sName} />
         </>
     );
 }
