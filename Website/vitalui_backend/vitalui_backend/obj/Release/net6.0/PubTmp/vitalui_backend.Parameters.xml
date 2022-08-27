@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="vitalui_backend" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\VitalUI_WS\\Website\\vitalui_backend\\vitalui_backend\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>
