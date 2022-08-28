@@ -2,38 +2,58 @@ using Microsoft.AspNetCore.Mvc;
 using vitalui_backend.Services;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System.Security.Cryptography;
+using System;
+using System.Text;
 using vitalui_backend.Models;
 
 namespace vitalui_backend.Controllers;
 
 
 [ApiController]
-[Route("api/info")]
+[Route("api")]
 public class AccountInformationController : ControllerBase
 {
 
     AccountInformationDatabase AID = new AccountInformationDatabase();
 
     [HttpPost]
-    public async Task<IActionResult> FromBody([FromBody] AccountInformationModel.root root)
+    [Route("sendinfo")]
+    public async Task<IActionResult> ForInfo([FromBody] AccountInformationModel.root root)
     {
-        byte[] salt = RandomNumberGenerator.GetBytes(128 / 8);
-        string? salt_NUM = Convert.ToBase64String(salt);
-
-        string hashed_password = Convert.ToBase64String(KeyDerivation.Pbkdf2(
-            password: root.password,
-            salt: salt,
-            prf: KeyDerivationPrf.HMACSHA256,
-            iterationCount: 100000,
-            numBytesRequested: 256 / 8
-        ));
-
-        System.Console.WriteLine(hashed_password);
-
+        
+        string? pass = this.HashPassword(root.password);
+        
         System.Console.WriteLine($"Hello {root.email}, {root.username}, {root.password}, {root.hasPremium}");
-        AID.MainDBCall(root.email, root.username, hashed_password);
+        AID.sendAccInfo(root.email, root.username, pass);
         return Ok();
 
+    }
+
+    [HttpPost]
+    [Route("checkinfo")]
+    public async Task<IActionResult> ForCheck([FromBody] AccountInformationModel.root root)
+    {
+        System.Console.WriteLine("ran");
+        string? pass = this.HashPassword(root.password);
+        AID.retrieveLogin();
+        return Ok();
+    }
+
+    string HashPassword(string? rawData)
+    {
+        using (SHA256 sha256Hash = SHA256.Create())
+        {
+            byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(rawData));
+
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+            return builder.ToString();
+        }
+
+        
     }
 
 }

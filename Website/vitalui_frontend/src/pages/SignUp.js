@@ -35,7 +35,7 @@ class SignUpPage extends Component
   }
 
   async sendLogin(){
-    let url_post = 'https://localhost:7257/api/info';
+    let url_post = 'https://localhost:7257/api/sendinfo';
     
 
     try{
