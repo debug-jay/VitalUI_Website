@@ -56,7 +56,6 @@ class SignUpPage extends Component
   }
 
   render(){
-
     return(
       <>
 <div className='flex h-screen'>

@@ -5,7 +5,7 @@ namespace vitalui_backend.Models;
 public class AccountInformationModel
 {
 
-    public class root
+    public class AccountRoot
     {
         public string? email { get; set; }
         public string? username { get; set; }
@@ -13,4 +13,5 @@ public class AccountInformationModel
         public string? hasPremium { get; set; }
 
     }
+
 }

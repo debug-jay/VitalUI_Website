@@ -18,7 +18,7 @@ public class AccountInformationController : ControllerBase
 
     [HttpPost]
     [Route("sendinfo")]
-    public async Task<IActionResult> ForInfo([FromBody] AccountInformationModel.root root)
+    public async Task<IActionResult> ForInfo([FromBody] AccountInformationModel.AccountRoot root)
     {
         
         string? pass = this.HashPassword(root.password);
@@ -31,9 +31,10 @@ public class AccountInformationController : ControllerBase
 
     [HttpPost]
     [Route("checkinfo")]
-    public async Task<IActionResult> ForCheck([FromBody] AccountInformationModel.root root)
+    public async Task<IActionResult> ForCheck([FromBody] AccountInformationModel.AccountRoot root)
     {
         string? pass = this.HashPassword(root.password);
+        
         AID.retrieveLogin(root.username, pass);
         return Ok();
     }

@@ -1,5 +1,6 @@
 using RestSharp;
 using Newtonsoft.Json;
+using System;
 using MySql.Data.MySqlClient;
 using vitalui_backend.Models;
 
@@ -8,13 +9,11 @@ namespace vitalui_backend.Services;
 public class AccountInformationDatabase
 {
 
-    public AccountInformationModel.root? AIM = new AccountInformationModel.root();
+    public AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
 
     public void sendAccInfo(string? email, string? username, string? passHash)
     {
 
-
-        
         System.Console.WriteLine("MainDBCall");
         string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
         string db_port = "3306";
@@ -53,7 +52,6 @@ public class AccountInformationDatabase
 
     public void retrieveLogin(string? username, string? pass)
     {
-        System.Console.WriteLine();
         string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
         string db_port = "3306";
         string db_username = "admin";        
@@ -71,17 +69,22 @@ public class AccountInformationDatabase
 
         MySqlCommand cmd = new MySqlCommand(queryCheckTable, conn);
 
-       Dictionary<string, object> dict = new Dictionary<string, object>();
-
+        List<string> AccountInfo = new List<string>();
+        //System.Console.WriteLine("username " + username + " password " + pass);
         using(MySqlDataReader reader = cmd.ExecuteReader())
         {
-            while(reader.Read())
+            
+            if(reader.Read())
             {
-                for(int i = 0; i < reader.FieldCount; i++)
+            
+                for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    System.Console.WriteLine(reader.GetValue(i));
+                    AccountInfo.Add(reader.GetValue(i).ToString());    
                 }
-                
+                System.Console.WriteLine(AccountInfo[2] + " Found!");
+            }
+            else{
+                System.Console.WriteLine("Data Not Found!");
             }
         }
     }
