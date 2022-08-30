@@ -11,5 +11,6 @@ public class AccountInformationModel
         public string? username { get; set; }
         public string? password { get; set; }
         public string? hasPremium { get; set; }
+
     }
 }

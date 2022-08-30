@@ -51,9 +51,8 @@ public class AccountInformationDatabase
     }
 
 
-    public void retrieveLogin()
+    public void retrieveLogin(string? username, string? pass)
     {
-        System.Console.WriteLine("MainDBCall");
         System.Console.WriteLine();
         string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
         string db_port = "3306";
@@ -66,18 +65,22 @@ public class AccountInformationDatabase
         MySqlConnection conn = new MySqlConnection(db_constring);
         conn.Open();
 
-        string queryCheckTable = $"Select * from account_info";
-        
+        // string queryCheckTable = $"Select * from account_info";
+        string queryCheckTable = $"select * from account_info where username='{username}' and password='{pass}'";
+
 
         MySqlCommand cmd = new MySqlCommand(queryCheckTable, conn);
+
+       Dictionary<string, object> dict = new Dictionary<string, object>();
 
         using(MySqlDataReader reader = cmd.ExecuteReader())
         {
             while(reader.Read())
             {
-                var count = reader.FieldCount;
-                System.Console.WriteLine($"{reader["username"]}\n{reader["password"]}");
-                System.Console.WriteLine(reader.GetValue(1));
+                for(int i = 0; i < reader.FieldCount; i++)
+                {
+                    System.Console.WriteLine(reader.GetValue(i));
+                }
                 
             }
         }

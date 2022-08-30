@@ -33,9 +33,8 @@ public class AccountInformationController : ControllerBase
     [Route("checkinfo")]
     public async Task<IActionResult> ForCheck([FromBody] AccountInformationModel.root root)
     {
-        System.Console.WriteLine("ran");
         string? pass = this.HashPassword(root.password);
-        AID.retrieveLogin();
+        AID.retrieveLogin(root.username, pass);
         return Ok();
     }
 
