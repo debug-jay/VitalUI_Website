@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using vitalui_backend.Services;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System.Security.Cryptography;
-using System;
 using System.Text;
 using vitalui_backend.Models;
 
@@ -13,15 +12,18 @@ namespace vitalui_backend.Controllers;
 [Route("api")]
 public class AccountInformationController : ControllerBase
 {
+    
+    
 
     AccountInformationDatabase AID = new AccountInformationDatabase();
+    private DataFunctions DF = new DataFunctions();
 
     [HttpPost]
     [Route("sendinfo")]
     public async Task<IActionResult> ForInfo([FromBody] AccountInformationModel.AccountRoot root)
     {
         
-        string? pass = this.HashPassword(root.password);
+        string? pass = DF.HashPassword(root.password);
         
         System.Console.WriteLine($"Hello {root.email}, {root.username}, {root.password}, {root.hasPremium}");
         AID.sendAccInfo(root.email, root.username, pass);
@@ -33,13 +35,18 @@ public class AccountInformationController : ControllerBase
     [Route("checkinfo")]
     public async Task<IActionResult> ForCheck([FromBody] AccountInformationModel.AccountRoot root)
     {
-        string? pass = this.HashPassword(root.password);
-        
+        string? pass = DF.HashPassword(root.password);
+
         AID.retrieveLogin(root.username, pass);
-        return Ok();
+        return Ok(AID.canLogin);
     }
 
-    string HashPassword(string? rawData)
+}
+
+public class DataFunctions
+{
+    public bool canAccess;
+    public string HashPassword(string? rawData)
     {
         using (SHA256 sha256Hash = SHA256.Create())
         {
@@ -52,8 +59,7 @@ public class AccountInformationController : ControllerBase
             }
             return builder.ToString();
         }
-
-        
     }
 
 }
+

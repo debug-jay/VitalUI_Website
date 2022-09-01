@@ -12,7 +12,8 @@ class SignUpPage extends Component
     this.state = {
 
       username: '',
-      password: ''
+      password: '',
+      canAccess: Boolean
 
     }
   }
@@ -27,10 +28,9 @@ class SignUpPage extends Component
     this.setState({password: e.target.value});
   }
 
-  async sendLogin(){
+  async Login(){
+    // everything contaning post request
     let url_post = 'https://localhost:7257/api/checkinfo';
-    
-
     try{
       await axios.post(url_post, {
         username: this.state.username,
@@ -38,6 +38,12 @@ class SignUpPage extends Component
       })
       .then(function(response) {
         console.log(response.data);
+        if(response.data == "true")
+        {
+          console.log("Do Something Else");
+          this.state.canAccess = true;
+        }
+        
       })
 
     }catch(e)
@@ -130,7 +136,7 @@ class SignUpPage extends Component
   </div>
 
   <div className=' flex justify-end'>
-      <button  className="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg" onClick={() => this.sendLogin()}>
+      <button  className="inline-block px-5 py-3 ml-3 text-sm font-medium text-white bg-blue-500 rounded-lg" onClick={() => this.Login()}>
           Login
       </button>
   </div>

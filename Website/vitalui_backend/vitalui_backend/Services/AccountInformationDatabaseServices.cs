@@ -1,8 +1,11 @@
 using RestSharp;
 using Newtonsoft.Json;
-using System;
+using System.Net;
+using System.Collections.Specialized;
+using System.Text;
 using MySql.Data.MySqlClient;
 using vitalui_backend.Models;
+using vitalui_backend.Controllers;
 
 namespace vitalui_backend.Services;
 
@@ -10,7 +13,7 @@ public class AccountInformationDatabase
 {
 
     public AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
-
+    public string? canLogin;
     public void sendAccInfo(string? email, string? username, string? passHash)
     {
 
@@ -28,6 +31,7 @@ public class AccountInformationDatabase
 
         string queryAddAccountInfoToTable = $"INSERT INTO account_info (email, username, password, hasPremium)";
         queryAddAccountInfoToTable += $" VALUES ('{email}','{username}','{passHash}','0');";
+        queryAddAccountInfoToTable += $" INSERT INTO account_access (username, canAccess) VALUES ('{username}','false');";
 
         MySqlCommand cmd = new MySqlCommand(queryAddAccountInfoToTable, conn);
 
@@ -35,9 +39,8 @@ public class AccountInformationDatabase
 
         if(reader.Read())
         {
-            AIM.email = reader["email"].ToString();
-            AIM.username = reader["username"].ToString();
-            //AIM.password[0] = reader["password"].ToString();
+            //AIM.email = reader["email"].ToString();
+            //AIM.username = reader["username"].ToString();
             AIM.hasPremium = reader["hasPremium"].ToString();
 
         }else
@@ -52,6 +55,7 @@ public class AccountInformationDatabase
 
     public void retrieveLogin(string? username, string? pass)
     {
+
         string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
         string db_port = "3306";
         string db_username = "admin";        
@@ -70,23 +74,29 @@ public class AccountInformationDatabase
         MySqlCommand cmd = new MySqlCommand(queryCheckTable, conn);
 
         List<string> AccountInfo = new List<string>();
-        //System.Console.WriteLine("username " + username + " password " + pass);
         using(MySqlDataReader reader = cmd.ExecuteReader())
-        {
-            
+        {         
+            bool canAccess;
             if(reader.Read())
             {
-            
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    AccountInfo.Add(reader.GetValue(i).ToString());    
+                    AccountInfo.Add(reader.GetValue(i).ToString());
                 }
-                System.Console.WriteLine(AccountInfo[2] + " Found!");
+                System.Console.WriteLine(AccountInfo[2] + " Fully Found!");
+                // Round 2
+                canLogin = "true";
+                reader.Close();
+                
             }
             else{
                 System.Console.WriteLine("Data Not Found!");
+                canLogin = "false";
+                reader.Close();
             }
         }
+                
     }
-
+    
 }
+
