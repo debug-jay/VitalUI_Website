@@ -1,6 +1,5 @@
 using MySql.Data.MySqlClient;
 using vitalui_backend.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace vitalui_backend.Services;
 
