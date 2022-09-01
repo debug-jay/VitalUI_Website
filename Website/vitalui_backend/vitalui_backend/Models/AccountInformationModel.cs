@@ -1,10 +1,7 @@
-
-
 namespace vitalui_backend.Models;
 
 public class AccountInformationModel
 {
-
     public class AccountRoot
     {
         public string? email { get; set; }

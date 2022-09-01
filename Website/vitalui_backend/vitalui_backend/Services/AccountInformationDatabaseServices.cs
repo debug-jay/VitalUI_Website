@@ -11,60 +11,36 @@ namespace vitalui_backend.Services;
 
 public class AccountInformationDatabase
 {
-
+    public DataBaseInformation DI = new DataBaseInformation();
     public AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
+      public string? DidSucceed;
     public string? canLogin;
+  
     public void sendAccInfo(string? email, string? username, string? passHash)
-    {
-
-        System.Console.WriteLine("MainDBCall");
-        string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
-        string db_port = "3306";
-        string db_username = "admin";        
-        string db_password = "spaceteJTAG1";
-        string db_database = "vitalui_database";
-
-        string db_constring = "SERVER="+db_server+";"+"PORT="+db_port+";"+"DATABASE="+db_database+";"+"UID="+db_username+";"+"PASSWORD="+db_password+";";
-
-        MySqlConnection conn = new MySqlConnection(db_constring);
+    {        
+        MySqlConnection conn = new MySqlConnection(DI.constring);
         conn.Open();
 
-        string queryAddAccountInfoToTable = $"INSERT INTO account_info (email, username, password, hasPremium)";
-        queryAddAccountInfoToTable += $" VALUES ('{email}','{username}','{passHash}','0');";
-        queryAddAccountInfoToTable += $" INSERT INTO account_access (username, canAccess) VALUES ('{username}','false');";
-
-        MySqlCommand cmd = new MySqlCommand(queryAddAccountInfoToTable, conn);
-
-        MySqlDataReader reader = cmd.ExecuteReader();
-
-        if(reader.Read())
+        if(email != "" && username != "" && passHash != "")
         {
-            //AIM.email = reader["email"].ToString();
-            //AIM.username = reader["username"].ToString();
-            AIM.hasPremium = reader["hasPremium"].ToString();
 
-        }else
-        {
-            System.Console.WriteLine("No Data Found");
+            string queryAddAccountInfoToTable = $"INSERT INTO account_info (email, username, password, hasPremium)";
+            queryAddAccountInfoToTable += $" VALUES ('{email}','{username}','{passHash}','0');";
+            MySqlCommand cmd = new MySqlCommand(queryAddAccountInfoToTable, conn);
+            DidSucceed = "true";
+        }
+        else{
+            System.Console.WriteLine("Null Variables");
+            DidSucceed = "false";
         }
 
-        reader.Close();
         conn.Close();
     }
 
 
     public void retrieveLogin(string? username, string? pass)
     {
-
-        string db_server = "vitalui-db.cn3xtnvutosx.us-east-1.rds.amazonaws.com";
-        string db_port = "3306";
-        string db_username = "admin";        
-        string db_password = "spaceteJTAG1";
-        string db_database = "vitalui_database";
-
-        string db_constring = "SERVER="+db_server+";"+"PORT="+db_port+";"+"DATABASE="+db_database+";"+"UID="+db_username+";"+"PASSWORD="+db_password+";";
-
-        MySqlConnection conn = new MySqlConnection(db_constring);
+        MySqlConnection conn = new MySqlConnection(DI.constring);
         conn.Open();
 
         // string queryCheckTable = $"Select * from account_info";
@@ -76,7 +52,6 @@ public class AccountInformationDatabase
         List<string> AccountInfo = new List<string>();
         using(MySqlDataReader reader = cmd.ExecuteReader())
         {         
-            bool canAccess;
             if(reader.Read())
             {
                 for (int i = 0; i < reader.FieldCount; i++)
@@ -90,7 +65,7 @@ public class AccountInformationDatabase
                 
             }
             else{
-                System.Console.WriteLine("Data Not Found!");
+                System.Console.WriteLine($"{username} Not Found!");
                 canLogin = "false";
                 reader.Close();
             }

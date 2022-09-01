@@ -12,9 +12,6 @@ namespace vitalui_backend.Controllers;
 [Route("api")]
 public class AccountInformationController : ControllerBase
 {
-    
-    
-
     AccountInformationDatabase AID = new AccountInformationDatabase();
     private DataFunctions DF = new DataFunctions();
 
@@ -27,7 +24,7 @@ public class AccountInformationController : ControllerBase
         
         System.Console.WriteLine($"Hello {root.email}, {root.username}, {root.password}, {root.hasPremium}");
         AID.sendAccInfo(root.email, root.username, pass);
-        return Ok();
+        return Ok(AID.DidSucceed);
 
     }
 
