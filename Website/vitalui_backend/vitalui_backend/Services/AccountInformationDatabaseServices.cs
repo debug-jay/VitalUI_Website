@@ -1,19 +1,14 @@
-using RestSharp;
-using Newtonsoft.Json;
-using System.Net;
-using System.Collections.Specialized;
-using System.Text;
 using MySql.Data.MySqlClient;
 using vitalui_backend.Models;
-using vitalui_backend.Controllers;
+using Microsoft.AspNetCore.Mvc;
 
 namespace vitalui_backend.Services;
 
-public class AccountInformationDatabase
+public class AccountInformationDatabase : ControllerBase
 {
-    public DataBaseInformation DI = new DataBaseInformation();
-    public AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
-      public string? DidSucceed;
+    private DataBaseInformation DI = new DataBaseInformation();
+    private AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
+    public string? DidSucceed;
     public string? canLogin;
   
     public void sendAccInfo(string? email, string? username, string? passHash)

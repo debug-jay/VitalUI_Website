@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using vitalui_backend.Services;
-using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System.Security.Cryptography;
 using System.Text;
 using vitalui_backend.Models;
@@ -12,7 +11,7 @@ namespace vitalui_backend.Controllers;
 [Route("api")]
 public class AccountInformationController : ControllerBase
 {
-    AccountInformationDatabase AID = new AccountInformationDatabase();
+    private AccountInformationDatabase AID = new AccountInformationDatabase();
     private DataFunctions DF = new DataFunctions();
 
     [HttpPost]
@@ -37,6 +36,8 @@ public class AccountInformationController : ControllerBase
         AID.retrieveLogin(root.username, pass);
         return Ok(AID.canLogin);
     }
+
+ 
 
 }
 
