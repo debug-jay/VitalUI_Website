@@ -49,3 +49,6 @@ D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\obj\Debug\net6.0\ref\vital
 D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\AWSSDK.Core.dll
 D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\AWSSDK.RDS.dll
 D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\AWSSDK.S3.dll
+D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\Konscious.Security.Cryptography.Argon2.dll
+D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\Konscious.Security.Cryptography.Blake2.dll
+D:\VitalUI_WS\Website\vitalui_backend\vitalui_backend\bin\Debug\net6.0\BCrypt.Net-Next.dll

@@ -35,6 +35,15 @@
           "lib/netcoreapp3.1/AWSSDK.S3.dll": {}
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {}
+        }
+      },
       "Google.Protobuf/3.19.4": {
         "type": "package",
         "compile": {
@@ -79,6 +88,28 @@
         },
         "runtime": {
           "lib/netstandard2.0/K4os.Hash.xxHash.dll": {}
+        }
+      },
+      "Konscious.Security.Cryptography.Argon2/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Konscious.Security.Cryptography.Blake2": "1.1.0",
+          "System.Memory": "4.5.4"
+        },
+        "compile": {
+          "lib/net6.0/Konscious.Security.Cryptography.Argon2.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Konscious.Security.Cryptography.Argon2.dll": {}
+        }
+      },
+      "Konscious.Security.Cryptography.Blake2/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Konscious.Security.Cryptography.Blake2.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Konscious.Security.Cryptography.Blake2.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -475,6 +506,37 @@
         "tools/uninstall.ps1"
       ]
     },
+    "BCrypt.Net-Next/4.0.3": {
+      "sha512": "W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.0.3.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net20/BCrypt.Net-Next.dll",
+        "lib/net20/BCrypt.Net-Next.xml",
+        "lib/net35/BCrypt.Net-Next.dll",
+        "lib/net35/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt.Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt.Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt.Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/net5.0/BCrypt.Net-Next.dll",
+        "lib/net5.0/BCrypt.Net-Next.xml",
+        "lib/net6.0/BCrypt.Net-Next.dll",
+        "lib/net6.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt.Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt.Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Google.Protobuf/3.19.4": {
       "sha512": "fd07/ykL4O4FhqrZIELm5lmiyOHfdPg9+o+hWr6tcfRdS7tHXnImg/2wtogLzlW2eEmr0J7j6ZrZvaWOLiJbxQ==",
       "type": "package",
@@ -555,6 +617,40 @@
         "lib/netstandard1.6/K4os.Hash.xxHash.xml",
         "lib/netstandard2.0/K4os.Hash.xxHash.dll",
         "lib/netstandard2.0/K4os.Hash.xxHash.xml"
+      ]
+    },
+    "Konscious.Security.Cryptography.Argon2/1.3.0": {
+      "sha512": "/pNPlNmjx7r7CGvw0WqO8Rk5vHHyUuzAWhB/PRKLZ2cmhQXoM6TYUooJcuES9zE9D+6yTOl+4LmFV2nKtgDyFg==",
+      "type": "package",
+      "path": "konscious.security.cryptography.argon2/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "konscious.security.cryptography.argon2.1.3.0.nupkg.sha512",
+        "konscious.security.cryptography.argon2.nuspec",
+        "lib/net46/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/net46/Konscious.Security.Cryptography.Argon2.xml",
+        "lib/net6.0/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/net6.0/Konscious.Security.Cryptography.Argon2.xml",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Argon2.dll",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Argon2.xml"
+      ]
+    },
+    "Konscious.Security.Cryptography.Blake2/1.1.0": {
+      "sha512": "enWOzNAlBjFcKoiBNVVLsa1ZzOciExznu+sUURE8dx322GI1LzrBxzEuZqjeOoK9oo9RubLtg96/7Y4JtUk9zA==",
+      "type": "package",
+      "path": "konscious.security.cryptography.blake2/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "konscious.security.cryptography.blake2.1.1.0.nupkg.sha512",
+        "konscious.security.cryptography.blake2.nuspec",
+        "lib/net46/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/net46/Konscious.Security.Cryptography.Blake2.xml",
+        "lib/net6.0/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/net6.0/Konscious.Security.Cryptography.Blake2.xml",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Blake2.dll",
+        "lib/netstandard1.3/Konscious.Security.Cryptography.Blake2.xml"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -1215,6 +1311,8 @@
       "AWSSDK.Core >= 3.7.12.24",
       "AWSSDK.RDS >= 3.7.17",
       "AWSSDK.S3 >= 3.7.9.42",
+      "BCrypt.Net-Next >= 4.0.3",
+      "Konscious.Security.Cryptography.Argon2 >= 1.3.0",
       "MySql.Data >= 8.0.30",
       "Newtonsoft.Json >= 13.0.2-beta1",
       "RestSharp >= 108.0.1",
@@ -1271,6 +1369,14 @@
           "AWSSDK.S3": {
             "target": "Package",
             "version": "[3.7.9.42, )"
+          },
+          "BCrypt.Net-Next": {
+            "target": "Package",
+            "version": "[4.0.3, )"
+          },
+          "Konscious.Security.Cryptography.Argon2": {
+            "target": "Package",
+            "version": "[1.3.0, )"
           },
           "MySql.Data": {
             "target": "Package",

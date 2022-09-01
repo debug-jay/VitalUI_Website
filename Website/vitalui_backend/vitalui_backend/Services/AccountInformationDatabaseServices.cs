@@ -1,11 +1,14 @@
 using MySql.Data.MySqlClient;
 using vitalui_backend.Models;
+using System.Text;
+using vitalui_backend.Controllers;
 
 namespace vitalui_backend.Services;
 
 public class AccountInformationDatabase
 {
     private DataBaseInformation DI = new DataBaseInformation();
+    private DataFunctions DF = new DataFunctions();
     private AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
     public string? DidSucceed;
     public string? canLogin;
@@ -22,6 +25,11 @@ public class AccountInformationDatabase
             queryAddAccountInfoToTable += $" VALUES ('{email}','{username}','{passHash}','0');";
             MySqlCommand cmd = new MySqlCommand(queryAddAccountInfoToTable, conn);
             DidSucceed = "true";
+            MySqlDataReader reader = cmd.ExecuteReader();
+            if(reader.Read())
+            {
+
+            }
         }
         else{
             System.Console.WriteLine("Null Variables");
@@ -37,24 +45,38 @@ public class AccountInformationDatabase
         MySqlConnection conn = new MySqlConnection(DI.constring);
         conn.Open();
 
+        
+
         // string queryCheckTable = $"Select * from account_info";
-        string queryCheckTable = $"select * from account_info where username='{username}' and password='{pass}'";
+        string queryCheckTable = $"select * from account_info where username='{username}'";
 
 
         MySqlCommand cmd = new MySqlCommand(queryCheckTable, conn);
-
-        List<string> AccountInfo = new List<string>();
+        List<string> AccountList = new List<string>();
+        try{
         using(MySqlDataReader reader = cmd.ExecuteReader())
         {         
             if(reader.Read())
             {
+                
                 for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    AccountInfo.Add(reader.GetValue(i).ToString());
+                    AccountList.Add(reader.GetValue(i).ToString()); 
                 }
-                System.Console.WriteLine(AccountInfo[2] + " Fully Found!");
+
+                bool verified = BCrypt.Net.BCrypt.Verify(pass, AccountList[3]);
+                if(verified)
+                {
+                    System.Console.WriteLine("Verified");
+                    canLogin = "true";
+                }
+                else{
+                    System.Console.WriteLine("Not Verified");
+                    canLogin = "false";
+                }
+                //System.Console.WriteLine($"username: {AccountList[1]} password: {AccountList[2]}  was Found!");
+
                 // Round 2
-                canLogin = "true";
                 reader.Close();
                 
             }
@@ -64,7 +86,10 @@ public class AccountInformationDatabase
                 reader.Close();
             }
         }
-                
+        } catch(Exception E)
+        {
+            System.Console.WriteLine(E.Message);
+        }      
     }
     
 }
