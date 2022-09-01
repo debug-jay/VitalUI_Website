@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace vitalui_backend.Services;
 
-public class AccountInformationDatabase : ControllerBase
+public class AccountInformationDatabase
 {
     private DataBaseInformation DI = new DataBaseInformation();
     private AccountInformationModel.AccountRoot? AIM = new AccountInformationModel.AccountRoot();
