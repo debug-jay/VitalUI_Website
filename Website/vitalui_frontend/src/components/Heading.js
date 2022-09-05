@@ -4,9 +4,9 @@ import React from 'react';
 const HEADING = () =>{
       return(
         <>
-        <div className="bg-white dark:bg-transparent h-screen flex justify-center">
+        <div className="bg-gray-900 h-screen flex justify-center">
     <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 -z-0">
-        <div className='absolute right-5 md:right-8 lg:right-9 bg-blue-800 w-14 h-14 lg:h-20 lg:w-20 rounded-full' id="placement"></div>
+        <div className='absolute right-5 md:right-8 lg:right-9 bg-gray-900 w-14 h-14 lg:h-20 lg:w-20 rounded-full' id="placement"></div>
     <div className='mt-20 w-full flex justify-center items-center'><iframe src='https://my.spline.design/macbookprocopy-0f42414ff68f7d8a16b363966416eb7a/' frameBorder='0' width='100%' height='100%' className=' h-96'></iframe></div>
     <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
             <span className="block">
@@ -31,7 +31,9 @@ const HEADING = () =>{
 
 function Heading(){
     return(
+        <>
         <HEADING />
+        </>
     );
 }
 

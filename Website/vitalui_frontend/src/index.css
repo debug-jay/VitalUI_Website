@@ -37,7 +37,7 @@ code {
 }
 
 #placement {
-  background-color: #23395d;
+  
 
   top:28rem;
 }
@@ -54,4 +54,107 @@ code {
 
 #box_temp {
   height: 36rem;
+}
+
+.custom-shape-divider-bottom-1662343745 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1662343745 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 181px;
+}
+
+.custom-shape-divider-bottom-1662343745 .shape-fill {
+  fill: #8A6E6E66;
+}
+
+.custom-shape-divider-bottom-1662344528 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1662344528 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-bottom-1662344528 .shape-fill {
+  fill: #111827;
+}
+
+.custom-shape-divider-top-1662344733 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1662344733 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 47px;
+}
+
+.custom-shape-divider-top-1662344733 .shape-fill {
+  fill: #111827;
+}
+
+.custom-shape-divider-top-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-2 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-top-2 .shape-fill {
+  fill: rgba(0, 0, 0, 0.689);
+}
+
+.custom-shape-divider-bottom-3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-3 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 70px;
+}
+
+.custom-shape-divider-bottom-3 .shape-fill {
+  fill: rgba(0, 0, 0, 0.689);
 }
